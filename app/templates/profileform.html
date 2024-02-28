@@ -35,5 +35,21 @@
         </p>
         <p>{{ form.submit() }}</p>
     </form>
+    <p>
+        {{ form.role.label }}<br>
+        {{ form.role() }}<br>
+        {% for error in form.role.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    Role: {{current_user.role}} <br>
 
+    <p>
+        {{ form.age.label }}<br>
+        {{ form.age() }}<br>
+        {% for error in form.age.errors %}
+        <span style="color: blue;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    Age: {{current_user.age}} <br>
 {% endblock %}
