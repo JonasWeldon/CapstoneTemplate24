@@ -8,6 +8,15 @@ from wtforms.validators import URL, Email, DataRequired, NumberRange
 from wtforms.fields.html5 import URLField, DateField, IntegerRangeField, EmailField
 from wtforms import StringField, SubmitField, TextAreaField, IntegerField, SelectField, FileField, RadioField
 from wtforms_components import TimeField
+class CarForm(FlaskForm):
+    manufacturer = StringField("Manufacturer", validators=[DataRequired()])
+    type = StringField('Type, ex: Sedan', validators=[DataRequired()])
+    model = StringField('Model', validators=[DataRequired()]) 
+    year = IntegerField('Year', validators=[NumberRange(min=1886,max=2025, message="Enter a number between 1886 and 2025.")])
+    image = FileField('Image')
+    engine = StringField('Engine')
+    gas = StringField('Gas Type')
+    submit = SubmitField('Submit')
 
 class ProfileForm(FlaskForm):
     fname = StringField('First Name', validators=[DataRequired()])
@@ -15,7 +24,7 @@ class ProfileForm(FlaskForm):
     image = FileField("Image") 
     submit = SubmitField('Post')
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
-    age = IntegerField("How old are you?", validators=[NumberRange(min=0,max=130,)])
+    age = IntegerField("How old are you?", validators=[NumberRange(min=0,max=130, message="Enter a number between 0 and 180.")])
 
 class ConsentForm(FlaskForm):
     adult_fname = StringField('First Name',validators=[DataRequired()])
