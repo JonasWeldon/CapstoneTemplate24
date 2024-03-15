@@ -6,3 +6,25 @@ from app.classes.data import Car, Comment
 from app.classes.forms import CarForm, CommentForm
 from flask_login import login_required
 import datetime as dt
+
+@app.route('/car/new', methods=['GET', 'POST'])
+@login_required
+def carNew():
+    form = CarForm()
+    if form.validate_on_submit():
+        newCar = Car(,
+            author = form.author.data,
+            manufacturer = form.manufacturer.data,
+            type = form.type.data,
+            model = form.model.data,
+            year = form.year.data,
+            image = form.image.data,
+            engine = form.engine.data,
+            gas = form.gas.data,
+            tag = form.tag.data,
+            author = current_user.id,
+            modify_date = dt.datetime.utcnow
+        )
+        newCar.save()
+        return redirect(url_for('car',blogID=newCar.id))
+    return render_template('carform.html',form=form)
