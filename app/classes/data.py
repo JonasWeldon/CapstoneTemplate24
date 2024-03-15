@@ -54,7 +54,23 @@ class Sleep(Document):
     meta = {
         'ordering': ['sleep_date']
     }
-    
+
+class Car(Document):
+    author = ReferenceField('User',reverse_delete_rule=CASCADE) 
+    manufacturer = StringField()
+    type = StringField()
+    model = StringField() 
+    year = IntField()
+    image = FileField()
+    engine = StringField()
+    gas = StringField()    
+    create_date = DateTimeField(default=dt.datetime.utcnow)
+    modify_date = DateTimeField()
+
+    meta = {
+        'ordering': ['-createdate']
+    }
+
 class Blog(Document):
     author = ReferenceField('User',reverse_delete_rule=CASCADE) 
     subject = StringField()
