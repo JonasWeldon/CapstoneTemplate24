@@ -20,7 +20,6 @@ def carNew():
             image = form.image.data,
             engine = form.engine.data,
             gas = form.gas.data,
-            tag = form.tag.data,
             author = current_user.id,
             modify_date = dt.datetime.utcnow
         )

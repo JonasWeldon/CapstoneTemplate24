@@ -19,14 +19,7 @@
                 {% for error in form.manufacturer.errors %}
                     <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
-            </p>            <p>
-                Type Here<br>
-                {{ form.manufacturer(cols=64, rows=10) }}
-                <!--List the errors for this field-->
-                {% for error in form.type.errors %}
-                    <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
+</p>
             <p>
                 Model Here<br>
                 {{ form.model(cols=64, rows=10) }}
@@ -59,6 +52,14 @@
             <p>
                 Image Here<br>
                 {{ form.image(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.image.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>            
+            <p>
+                Type Here<br>
+                {{ form.type(cols=64, rows=10) }}
                 <!--List the errors for this field-->
                 {% for error in form.image.errors %}
                     <span style="color: red;">[{{ error }}]</span>
