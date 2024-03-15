@@ -13,14 +13,57 @@
             {{ form.hidden_tag() }}
 
             <p>
-                Comments here <br>
-                {{ form.content(cols=64, rows=10) }}
+                Manufacturer Here<br>
+                {{ form.manufacturer(cols=64, rows=10) }}
                 <!--List the errors for this field-->
-                {% for error in form.content.errors %}
+                {% for error in form.manufacturer.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>            <p>
+                Type Here<br>
+                {{ form.manufacturer(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.type.errors %}
                     <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-
+            <p>
+                Model Here<br>
+                {{ form.model(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.model.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>            <p>
+                Year Here<br>
+                {{ form.year(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.year.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>            <p>
+                Engine Here<br>
+                {{ form.engine(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.engine.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>            <p>
+                Gas Here<br>
+                {{ form.gas(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.gas.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                Image Here<br>
+                {{ form.image(cols=64, rows=10) }}
+                <!--List the errors for this field-->
+                {% for error in form.image.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
              <p>
                 <img src="/static/CloudsPNG.png" class="rounded float-end" width = "200" hieght= "200" alt="...">
                 <img src="/static/CloudsPNG.png" class="rounded float-start" width = "200" hieght= "200" alt="...">    </div>

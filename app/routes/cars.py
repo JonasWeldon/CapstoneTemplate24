@@ -12,8 +12,7 @@ import datetime as dt
 def carNew():
     form = CarForm()
     if form.validate_on_submit():
-        newCar = Car(,
-            author = form.author.data,
+        newCar = Car(
             manufacturer = form.manufacturer.data,
             type = form.type.data,
             model = form.model.data,
