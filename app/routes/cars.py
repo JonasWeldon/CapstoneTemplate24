@@ -21,7 +21,6 @@ def carNew():
             engine = form.engine.data,
             gas = form.gas.data,
             author = current_user.id,
-            modify_date = dt.datetime.utcnow
         )
         newCar.save()
         return redirect(url_for('car',blogID=newCar.id))
