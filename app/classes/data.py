@@ -61,7 +61,6 @@ class Car(Document):
     type = StringField()
     model = StringField() 
     year = IntField()
-    image = FileField()
     engine = StringField()
     gas = StringField()    
     create_date = DateTimeField(default=dt.datetime.utcnow)

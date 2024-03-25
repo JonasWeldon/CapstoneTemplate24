@@ -13,7 +13,6 @@ class CarForm(FlaskForm):
     type = StringField('Type, ex: Sedan', validators=[DataRequired()])
     model = StringField('Model', validators=[DataRequired()]) 
     year = IntegerField('Year', validators=[NumberRange(min=1886,max=2025, message="Enter a number between 1886 and 2025.")])
-    image = FileField('Image')
     engine = StringField('Engine')
     gas = StringField('Gas Type')
     submit = SubmitField('Submit')

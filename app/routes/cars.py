@@ -1,3 +1,4 @@
+from matplotlib import image
 from app import app
 import mongoengine.errors
 from flask import render_template, flash, redirect, url_for
@@ -17,7 +18,6 @@ def carNew():
             type = form.type.data,
             model = form.model.data,
             year = form.year.data,
-            image = form.image.data,
             engine = form.engine.data,
             gas = form.gas.data,
             author = current_user.id,
