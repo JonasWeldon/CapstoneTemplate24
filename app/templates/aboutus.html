@@ -1,7 +1,18 @@
-<h1>About me!</h1>
-<h2>My Goal:</h2>
-<p>My goal is to make people more aware of how they're spending their money which includes: <br>
-    Making sure they're updated on the monthly recurring subscriptions that they forgot to remove <br>
-    Knowing how their money is being spent everyday to manage it <br>
-    Helping people better manage their money
-<img src="/static/money.jpg" width="400">
+
+{% extends 'base.html' %}
+{% block body %}
+<class class="leftcolumn">
+    <h1><strong>My Goal:</strong></h1>
+    <h2>My goal is to make people more aware of how they're <br>spending their money which includes:</h2> <br>
+        <li>Making sure they're updated on the monthly recurring subscriptions that they forgot to remove <br></li>
+        <li>Knowing how their money is being spent everyday to manage it <br></li>
+        <li>Helping people better manage their money<br></li>
+    
+</class>
+<class class="imgleftcolumn">
+    <img src="/static/money.jpg" width="500px" style="border: 10px solid #000000;"></img>
+</class>
+<class class="rightcolumn">
+    <h1><strong>About me!</strong></h1>
+</class>
+{% endblock %}

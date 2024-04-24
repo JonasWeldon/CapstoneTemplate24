@@ -1,3 +1,19 @@
 html body {
-    background-color: #9bbeeb;
-  }
+    background-color: #02b881;
+}
+.leftcolumn {
+  position: relative;
+  right: 750px;
+  text-align: center;
+}
+.imgleftcolumn{
+  position: relative;
+  right: 330px;
+  top: 150px;
+}
+.rightcolumn {
+  position: relative;
+  right: 0px;
+  text-align: center;
+  top: -500px;
+}
