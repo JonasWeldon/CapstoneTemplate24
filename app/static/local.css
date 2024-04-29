@@ -17,3 +17,18 @@ html body {
   text-align: center;
   top: -500px;
 }
+.nav-item{
+  font-family: 'Courier New'
+}
+.form{
+  position: relative;
+  right: 40px;
+  text-align: center;
+  top: 0px;
+  color: black
+}
+h1{
+  font-weight: bold;
+  color: "black";
+  font-family: "Impact";
+}
