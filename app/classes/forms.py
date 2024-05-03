@@ -9,12 +9,10 @@ from wtforms.fields.html5 import URLField, DateField, IntegerRangeField, EmailFi
 from wtforms import StringField, SubmitField, TextAreaField, IntegerField, SelectField, FileField, RadioField
 from wtforms_components import TimeField
 class CarForm(FlaskForm):
-    manufacturer = StringField("Manufacturer", validators=[DataRequired()])
-    type = StringField('Type, ex: Sedan', validators=[DataRequired()])
-    model = StringField('Model', validators=[DataRequired()]) 
-    year = IntegerField('Year', validators=[NumberRange(min=1886,max=2025, message="Enter a number between 1886 and 2025.")])
-    engine = StringField('Engine')
-    gas = StringField('Gas Type')
+    manufacturer = StringField("Manufacturer")
+    recurring = StringField('Type')
+    model = StringField('Model') 
+    year = StringField('Year')
     submit = SubmitField('Submit')
 
 class ProfileForm(FlaskForm):

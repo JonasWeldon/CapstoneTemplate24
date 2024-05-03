@@ -3,19 +3,24 @@ html body {
 }
 .leftcolumn {
   position: relative;
-  right: 750px;
+  right: 620px;
   text-align: center;
 }
 .imgleftcolumn{
   position: relative;
-  right: 330px;
+  right: 200px;
   top: 150px;
 }
 .rightcolumn {
   position: relative;
-  right: 0px;
+  right: -330px;
   text-align: center;
-  top: -500px;
+  top: -560px;
+}
+.imgrightcolumn{
+  position: relative;
+  right: -500px;
+  top: 150px;
 }
 .nav-item{
   font-family: 'Courier New'

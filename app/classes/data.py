@@ -58,11 +58,9 @@ class Sleep(Document):
 class Car(Document):
     author = ReferenceField('User',reverse_delete_rule=CASCADE) 
     manufacturer = StringField()
-    type = StringField()
+    recurring = StringField()
     model = StringField() 
-    year = IntField()
-    engine = StringField()
-    gas = StringField()    
+    year = StringField()   
     create_date = DateTimeField(default=dt.datetime.utcnow)
     modify_date = DateTimeField()
 
