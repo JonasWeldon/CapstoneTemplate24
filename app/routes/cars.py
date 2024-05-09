@@ -1,12 +1,18 @@
 from matplotlib import image
-from app import app
 import mongoengine.errors
+from app import app
 from flask import render_template, flash, redirect, url_for
 from flask_login import current_user
 from app.classes.data import Car
 from app.classes.forms import CarForm
 from flask_login import login_required
 import datetime as dt
+
+@app.route('/viewall')
+@login_required
+def carList():
+    cars = Car.objects()
+    return render_template('carsview.html',cars=cars)
 
 @app.route('/car/new', methods=['GET', 'POST'])
 @login_required
@@ -63,13 +69,6 @@ def carEdit(carID):
 def car(carID):
     thisCar = Car.objects.get(id=carID)
     return render_template('car.html',car=thisCar)
-
-@app.route('/car/list/')
-@login_required
-def carList():
-    cars = Car.objects()
-    return render_template('cars.html',cars=cars)
-
 
 @app.route('/car/delete/<carID>')
 @login_required

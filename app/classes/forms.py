@@ -24,7 +24,7 @@ class ProfileForm(FlaskForm):
     age = IntegerField("How old are you?", validators=[NumberRange(min=0,max=130, message="Enter a number between 0 and 180.")])
 
 class ConsentForm(FlaskForm):
-    adult_fname = StringField('First Name',validators=[DataRequired()])
+    adult_fname : StringField('First Name',validators=[DataRequired()])
     adult_lname = StringField('Last Name',validators=[DataRequired()])
     adult_email = EmailField('Email',validators=[Email()])
     consent = RadioField('Do you want your parents or teachers to see your sleep data/graph', choices=[(True,"True"),(False,"False")])
@@ -41,9 +41,9 @@ class SleepForm(FlaskForm):
     submit = SubmitField("Submit")
 
 class BlogForm(FlaskForm):
-    subject = StringField('Subject', validators=[DataRequired()])
-    content = TextAreaField('Blog', validators=[DataRequired()])
-    tag = StringField('Tag', validators=[DataRequired()])
+    subject = StringField('Subject')
+    content = TextAreaField('Blog')
+    tag = StringField('Tag')
     submit = SubmitField('Blog')
 
 class CommentForm(FlaskForm):
